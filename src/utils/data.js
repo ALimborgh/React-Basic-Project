@@ -1,4 +1,4 @@
-export const recipesData = JSON.parse(`{
+const data = JSON.parse(`{
   "from": 1,
   "to": 20,
   "count": 10000,
@@ -6741,3 +6741,5 @@ export const recipesData = JSON.parse(`{
     }
   ]
 }`);
+
+export const recipes = data.hits.map(hit => hit.recipe);
