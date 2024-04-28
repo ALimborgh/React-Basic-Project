@@ -1,13 +1,14 @@
 import { Center, Heading } from '@chakra-ui/react';
-import { data } from '../utils/data';
+import { RecipeChoice } from '../components/RecipeChoice';
 
 export const RecipeListPage = () => {
   // You can play around with the console log, but ultimately remove it once you are done
-  console.log(data.hits[0].recipe.label);
+  const greeting = 'Welcome to our recipe book!';
 
   return (
     <Center h="100vh" flexDir="column">
-      <Heading>Your Recipe App</Heading>
+      <Heading>{greeting}</Heading>
+      <RecipeChoice />
     </Center>
   );
-};
+}
