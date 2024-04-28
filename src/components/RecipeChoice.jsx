@@ -29,6 +29,7 @@ export const RecipeChoice = ({recipes}) => {
                             <Stack mt='6' spacing='3' textColor='black'>
                                 <Text as='sub' fontSize="sm">{recipe.mealType}</Text>
                                 <Heading size='sm'>{recipe.label}</Heading>
+                                {recipe.dietLabels.length > 0 && 
                                 <Text fontSize='xs'>
                                     Diet:{""}
                                     {recipe.dietLabels.map((diet) => (
@@ -37,6 +38,7 @@ export const RecipeChoice = ({recipes}) => {
                                         </Highlight>
                                     ))}
                                 </Text>
+                                }
                                 <Text fontSize='xs'>
                                     Dish:{""}
                                     {recipe.dishType.map((dish) => (
