@@ -6,9 +6,9 @@ export const RecipeListPage = () => {
   const greeting = 'Welcome to our recipe book!';
 
   return (
-    <Center h="100vh" flexDir="column">
+    <Center display='-ms-flexbox' align='center'>
       <Heading>{greeting}</Heading>
-      <RecipeChoice />
+      <RecipeChoice/>
     </Center>
   );
 }
