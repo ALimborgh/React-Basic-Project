@@ -5,7 +5,7 @@ export const RecipeChoice = () => {
     const handleCardClick = (recipe) => {
         console.log(recipe);
     };
-
+    
     return (
         <Box>
             <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10}>
@@ -30,7 +30,6 @@ export const RecipeChoice = () => {
                             <Stack mt='6' spacing='3' textColor='black'>
                                 <Text as='sub' fontSize="sm">{recipe.mealType}</Text>
                                 <Heading size='sm'>{recipe.label}</Heading>
-                                {recipe.dietLabels.length > 0 &&
                                 <Text fontSize='xs'>
                                     Diet:{""}
                                     {recipe.dietLabels.map((diet) => (
@@ -39,7 +38,6 @@ export const RecipeChoice = () => {
                                         </Highlight>
                                     ))}
                                 </Text>
-                                }
                                 <Text fontSize='xs'>
                                     Dish:{""}
                                     {recipe.dishType.map((dish) => (
