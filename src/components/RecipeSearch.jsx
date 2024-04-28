@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { TextInput } from './UI/Text';
-import { RecipeList } from './RecipeList';
+import { TextInput } from './ui/TextInput';
+import { RecipeChoice } from './RecipeChoice';
 import { recipes } from '../utils/data';
 
 
@@ -10,14 +10,15 @@ export const RecipeSearch = ({ clickFn }) => {
 	const handleChange = (event) => {
 		setSearchField(event.target.value);
 	};
-	const matchedDrinks = recipes.filter((recipe) => {
-    return recipe.label.toLowerCase().includes(searchField.toLowerCase());
-	});
+    const matchedRecipes = recipes.filter((recipe) => {
+        return recipe.label.toLowerCase().includes(searchField.toLowerCase()) ||
+            recipe.healthLabels.some(label => label.toLowerCase().includes(searchField.toLowerCase()));
+    });
 	return (
 		<>
-			<label>Search for drinks:</label>
+			<label>Search for recipe:</label>
 			<TextInput changeFn={handleChange} w={200} mb={8} />
-			<RecipeList clickFn={clickFn} drinks={matchedDrinks} />
+			<RecipeChoice clickFn={clickFn} recipes={matchedRecipes} />
 		</>
 	);
 };

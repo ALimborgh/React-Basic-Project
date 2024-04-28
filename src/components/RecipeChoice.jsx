@@ -1,11 +1,10 @@
-import { recipes } from "../utils/data.js";
 import { Box, Card, Stack, CardBody, Heading, Text, SimpleGrid, Highlight} from '@chakra-ui/react'
 
-export const RecipeChoice = () => {
+export const RecipeChoice = ({recipes}) => {
     const handleCardClick = (recipe) => {
         console.log(recipe);
     };
-    
+
     return (
         <Box>
             <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10}>

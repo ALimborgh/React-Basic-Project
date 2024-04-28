@@ -1,5 +1,4 @@
 import { Center, Heading } from '@chakra-ui/react';
-import { RecipeChoice } from '../components/RecipeChoice';
 import { RecipeSearch } from '../components/RecipeSearch';
 
 export const RecipeListPage = () => {
@@ -10,7 +9,6 @@ export const RecipeListPage = () => {
     <Center display='-ms-flexbox' align='center'>
       <Heading>{greeting}</Heading>
       <RecipeSearch/>
-      <RecipeChoice/>
     </Center>
   );
 }
