@@ -1,4 +1,4 @@
-export const data = JSON.parse(`{
+export const recipesData = JSON.parse(`{
   "from": 1,
   "to": 20,
   "count": 10000,
