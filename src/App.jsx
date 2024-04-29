@@ -3,7 +3,7 @@ import { RecipeListPage } from "./pages/RecipeListPage";
 
 export const App = () => {
    return (
-     <Box bg='teal.600' w='auto' h='auto' p={4}>
+     <Box bg='teal.600' w='auto' minH='100vh' p={4}>
         <RecipeListPage />
      </Box>
     );
