@@ -353,7 +353,7 @@ const data = JSON.parse(`{
         ],
         "ingredients": [
           {
-            "text": "* 8 pork chops",
+            "text": "8 pork chops",
             "quantity": 8,
             "measure": "<unit>",
             "food": "pork chops",
@@ -363,7 +363,7 @@ const data = JSON.parse(`{
             "image": "https://www.edamam.com/food-img/499/49977aabc381bd3889ad9100978e1bb6.jpg"
           },
           {
-            "text": "* 1/2 cup sugar free ketchup",
+            "text": "1/2 cup sugar free ketchup",
             "quantity": 0.5,
             "measure": "cup",
             "food": "ketchup",
@@ -373,7 +373,7 @@ const data = JSON.parse(`{
             "image": "https://www.edamam.com/food-img/257/257207c446011b849001ae596390341c.jpeg"
           },
           {
-            "text": "* 1/3 cup Seasoned Rice Vinegar, original",
+            "text": "1/3 cup Seasoned Rice Vinegar, original",
             "quantity": 0.3333333333333333,
             "measure": "cup",
             "food": "Seasoned Rice Vinegar",
@@ -383,7 +383,7 @@ const data = JSON.parse(`{
             "image": "https://www.edamam.com/food-img/c7d/c7dbd1846c5d08e9739930d70a404d50.jpg"
           },
           {
-            "text": "* 1/3 cup Swerve Brown Sweetener",
+            "text": "1/3 cup Swerve Brown Sweetener",
             "quantity": 0.3333333333333333,
             "measure": "<unit>",
             "food": "Sweetener",
@@ -393,7 +393,7 @@ const data = JSON.parse(`{
             "image": "https://www.edamam.com/food-img/0e3/0e3edc39fe123b516c4c758f4f09e99f.jpg"
           },
           {
-            "text": "* 1 Tablespoon ground cumin",
+            "text": "1 Tablespoon ground cumin",
             "quantity": 1,
             "measure": "tablespoon",
             "food": "cumin",
@@ -403,7 +403,7 @@ const data = JSON.parse(`{
             "image": "https://www.edamam.com/food-img/07e/07e2a4eb77ce46591033846504817d35.jpg"
           },
           {
-            "text": "* 1 teaspoons chipotle chili powder",
+            "text": "1 teaspoons chipotle chili powder",
             "quantity": 1,
             "measure": "teaspoon",
             "food": "chili powder",
