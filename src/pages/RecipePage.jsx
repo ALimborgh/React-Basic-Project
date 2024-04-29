@@ -39,11 +39,13 @@ export const RecipePage = () => {
                 <Box 
                     as="img"
                     src={recipe.imageUrl}
-                    objectFit='cover'
-                    objectPosition="center" 
-                    width="100%" 
-                    height="600px"
-                    borderRadius='md'
+                    style={{
+                        width: '100%',
+                        height: '600px',
+                        objectFit: 'cover',
+                        objectPosition: 'center',
+                        borderRadius: 'md',
+                    }}
                 />
                 <Grid templateColumns="repeat(2, 1fr)" gap={6}>
                     <Stack>
@@ -60,24 +62,30 @@ export const RecipePage = () => {
                         <Text>Health Labels:</Text>
                         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={2}>
                             {recipe.healthLabels.map((label, index) => (
-                                <Box key={index} bg="yellow.200" p={1}>
-                                    <Text>- {String(label)}</Text>
+                                <Box key={index} p={1}>
+                                    <Highlight query={String(label)} styles={{ px: '2px', py: 'px', bg: 'purple.300', borderRadius: 'md' }}>
+                                        {String(label)}
+                                    </Highlight>
                                 </Box>
                             ))}
                         </SimpleGrid>
                         <Text>Diet Labels:</Text>
                         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={2}>
                             {recipe.dietLabels.map((label, index) => (
-                                <Box key={index} bg="yellow.200" p={1}>
-                                    <Text>- {String(label)}</Text>
+                                <Box key={index} p={1}>
+                                    <Highlight query={String(label)} styles={{ px: '2px', py: 'px', bg: 'green.300', borderRadius: 'md' }}>
+                                        {String(label)}
+                                    </Highlight>
                                 </Box>
                             ))}
                         </SimpleGrid>
                         <Text>Cautions:</Text>
                         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={2}>
                             {recipe.cautions.map((caution, index) => (
-                                <Box key={index} bg="yellow.200" p={1}>
-                                    <Text>- {caution}</Text>
+                                <Box key={index} p={1}>
+                                <Highlight query={caution} styles={{ px: '2px', py: 'px', bg: 'red.300', borderRadius: 'md' }}>
+                                        {caution}
+                                    </Highlight>
                                 </Box>
                             ))}
                         </SimpleGrid>
@@ -86,7 +94,7 @@ export const RecipePage = () => {
                             {Object.entries(recipeData.totalNutrients).map(([nutrient, data], index) => {
                                 if (['ENERC_KCAL', 'PROCNT', 'FAT', 'CHOCDF', 'CHOLE', 'NA'].includes(nutrient)) {
                                     return (
-                                       <Box key={index} bg="yellow.200" p={1}> 
+                                       <Box key={index} p={1}> 
                                             <Text>
                                                 - {data.label}: {Math.ceil(data.quantity)} {data.unit}
                                             </Text>
