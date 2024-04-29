@@ -4,7 +4,9 @@ import { useParams } from 'react-router-dom';
 export const RecipePage = () => {
     const { label } = useParams();
     const decodedLabel = decodeURIComponent(label);
-    const recipeData = recipes.find(recipe => recipe.decodedLabel === Number(decodedLabel));
+    const recipeData = recipes.find(recipe => recipe.label === decodedLabel);
+    console.log(`URL label: ${decodedLabel}`);
+    console.log(recipeData);
     
     if (!recipeData) {
         return <h1>Recipe not found!</h1>;

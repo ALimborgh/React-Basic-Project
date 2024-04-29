@@ -9,7 +9,7 @@ export const App = () => {
         <Router>
             <Routes>
                 <Route path="/" element={<RecipeListPage />} />
-                <Route path="/recipe/:id" element={<RecipePage />} />
+                <Route path="/recipe/:label" element={<RecipePage />} />
             </Routes>
         </Router>
      </Box>
