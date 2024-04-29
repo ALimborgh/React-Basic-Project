@@ -34,7 +34,7 @@ export const RecipeChoice = ({recipes}) => {
                                 <Text fontSize='xs'>
                                     Diet:{""}
                                     {recipe.dietLabels.map((diet) => (
-                                        <Highlight key={recipe.id} query={diet} styles={{ px: '1', py: '1', bg: 'green.300' }}>
+                                        <Highlight key={recipe.id} query={diet} styles={{ px: '2px', py: 'px', bg: 'green.300', borderRadius: 'md' }}>
                                             {diet + ' '}
                                         </Highlight>
                                     ))}
@@ -43,7 +43,7 @@ export const RecipeChoice = ({recipes}) => {
                                 <Text fontSize='xs'>
                                     Dish:{""}
                                     {recipe.dishType.map((dish) => (
-                                        <Highlight key={recipe.id} query={dish} styles={{ px: '1', py: '1', as:'em'}}>
+                                        <Highlight key={recipe.id} query={dish} styles={{ px: '2px', py: '1px', as:'em', borderRadius: 'md'}}>
                                             {dish}
                                         </Highlight>
                                     ))}
@@ -52,7 +52,7 @@ export const RecipeChoice = ({recipes}) => {
                                 <Text fontSize="xs">
                                     Cautions:{""}
                                     {recipe.cautions.map((caution) => (
-                                            <Highlight key={recipe.id} query={caution} styles={{ px: '1', py: '1', bg: 'red.300' }}>
+                                            <Highlight key={recipe.id} query={caution} styles={{ px: '2px', py: '1px', bg: 'red.300', borderRadius: 'md' }}>
                                                 {caution + ' '}
                                             </Highlight>
                                     ))}
