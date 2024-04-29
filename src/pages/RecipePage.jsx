@@ -34,8 +34,16 @@ export const RecipePage = () => {
             boxShadow="lg"
             border = "1px solid"
         >
-            <CardBody p={4}>
-                <Button color="Black" _hover={{ bg: "teal.100" }} bg="teal.400" onClick={() =>navigate(-1)} mb={1} > Previous </Button>
+            <CardBody 
+                p={4}
+            >
+                <Button 
+                    color="Black" 
+                    _hover={{ bg: "teal.100" }} 
+                    bg="teal.400" 
+                    onClick={() =>navigate(-1)} 
+                    mb={1} 
+                > Previous </Button>
                 <Box 
                     as="img"
                     src={recipe.imageUrl}
@@ -63,7 +71,10 @@ export const RecipePage = () => {
                         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={2}>
                             {recipe.healthLabels.map((label, index) => (
                                 <Box key={index} p={1}>
-                                    <Highlight query={String(label)} styles={{ px: '2px', py: 'px', bg: 'purple.300', borderRadius: 'md' }}>
+                                    <Highlight 
+                                        query={String(label)} 
+                                        styles={{ px: '2px', py: 'px', bg: 'purple.300', borderRadius: 'md' }}
+                                    >
                                         {String(label)}
                                     </Highlight>
                                 </Box>
@@ -73,7 +84,10 @@ export const RecipePage = () => {
                         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={2}>
                             {recipe.dietLabels.map((label, index) => (
                                 <Box key={index} p={1}>
-                                    <Highlight query={String(label)} styles={{ px: '2px', py: 'px', bg: 'green.300', borderRadius: 'md' }}>
+                                    <Highlight 
+                                        query={String(label)} 
+                                        styles={{ px: '2px', py: 'px', bg: 'green.300', borderRadius: 'md' }}
+                                    >
                                         {String(label)}
                                     </Highlight>
                                 </Box>
@@ -83,7 +97,10 @@ export const RecipePage = () => {
                         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={2}>
                             {recipe.cautions.map((caution, index) => (
                                 <Box key={index} p={1}>
-                                <Highlight query={caution} styles={{ px: '2px', py: 'px', bg: 'red.300', borderRadius: 'md' }}>
+                                <Highlight 
+                                    query={caution} 
+                                    styles={{ px: '2px', py: 'px', bg: 'red.300', borderRadius: 'md' }}
+                                >
                                         {caution}
                                     </Highlight>
                                 </Box>
