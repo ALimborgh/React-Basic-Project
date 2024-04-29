@@ -2,10 +2,10 @@ import {recipes} from '../utils/data';
 import { useParams } from 'react-router-dom';
 
 export const RecipePage = () => {
-    const { id } = useParams();
-    const recipeData = recipes.find(recipe => recipe.id === id);
-    console.log(recipeData);
-    console.log(id);
+    const { label } = useParams();
+    const decodedLabel = decodeURIComponent(label);
+    const recipeData = recipes.find(recipe => recipe.decodedLabel === Number(decodedLabel));
+    
     if (!recipeData) {
         return <h1>Recipe not found!</h1>;
     }

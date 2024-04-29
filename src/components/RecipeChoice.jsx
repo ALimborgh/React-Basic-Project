@@ -2,12 +2,16 @@ import { Box, Card, Stack, CardBody, Heading, Text, SimpleGrid, Highlight} from 
 import { Link } from 'react-router-dom';
 
 export const RecipeChoice = ({recipes, clickfn}) => {
-    const handleCardClick = (id) => clickfn(id);
+    const handleCardClick = (id) => {
+        if (typeof clickfn === 'function') {
+            clickfn(id);
+        }
+    };
 
     return (
         <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10}>
                 {recipes.map((recipe, index) => (
-                    <Link to={`/recipe/${recipe.id}`} key={index} onClick={() => handleCardClick(recipe.id)}>
+                    <Link to={`/recipe/${encodeURIComponent(recipe.label)}`} key={index} onClick={() => handleCardClick(recipe.name)}>
                         <Card 
                             bg="white.500"
                             color="white"
