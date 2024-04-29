@@ -33,9 +33,12 @@ export const RecipePage = () => {
             color="black"
             boxShadow="lg"
             border = "1px solid"
+            maxWidth={1050}
+            mx="auto"
         >
             <CardBody 
                 p={4}
+                maxWidth={1050}
             >
                 <Button 
                     color="Black" 
@@ -48,24 +51,24 @@ export const RecipePage = () => {
                     as="img"
                     src={recipe.imageUrl}
                     width= '100%'
-                    height= '600px'
+                    maxHeight= '400px'
                     objectFit= 'cover'
                     objectPosition= 'center'
                     borderRadius= 'md'
                 />
                 <Grid templateColumns="repeat(2, 1fr)" gap={6}>
                     <Stack>
-                        <Text>{recipe.mealType}</Text>
-                        <Text>{recipe.title}</Text>
-                        <Text>Time: {recipe.totalTime} min</Text>
-                        <Text>Servings: {recipe.servings}</Text>
-                        <Text>Ingredients: </Text>
+                        <Text as='sub' color='grey' mt={1}>{recipe.mealType}</Text>
+                        <Text as='b' fontSize='xl'>{recipe.title}</Text>
+                        <Text as='i'>Time: {recipe.totalTime} min</Text> 
+                        <Text as='i'>Servings: {recipe.servings}</Text>
+                        <Text as='b'>Ingredients: </Text>
                         {recipe.ingredients.map((ingredient, index) => (
                             <Text key={index}>- {ingredient}</Text>
                         ))}
                     </Stack>
                     <Stack>
-                        <Text>Health Labels:</Text>
+                        <Text as='i'>Health Labels:</Text>
                         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={2}>
                             {recipe.healthLabels.map((label, index) => (
                                 <Box key={index} p={1}>
@@ -78,7 +81,7 @@ export const RecipePage = () => {
                                 </Box>
                             ))}
                         </SimpleGrid>
-                        <Text>Diet Labels:</Text>
+                        <Text as='i'>Diet Labels:</Text>
                         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={2}>
                             {recipe.dietLabels.map((label, index) => (
                                 <Box key={index} p={1}>
@@ -91,7 +94,7 @@ export const RecipePage = () => {
                                 </Box>
                             ))}
                         </SimpleGrid>
-                        <Text>Cautions:</Text>
+                        <Text as='i'>Cautions:</Text>
                         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={2}>
                             {recipe.cautions.map((caution, index) => (
                                 <Box key={index} p={1}>
@@ -104,14 +107,14 @@ export const RecipePage = () => {
                                 </Box>
                             ))}
                         </SimpleGrid>
-                        <Text>Nutrients:</Text>
+                        <Text as='i'>Nutrients:</Text>
                         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={2}>
                             {Object.entries(recipeData.totalNutrients).map(([nutrient, data], index) => {
                                 if (['ENERC_KCAL', 'PROCNT', 'FAT', 'CHOCDF', 'CHOLE', 'NA'].includes(nutrient)) {
                                     return (
                                        <Box key={index} p={1}> 
                                             <Text>
-                                                - {data.label}: {Math.ceil(data.quantity)} {data.unit}
+                                                {data.label}: {Math.ceil(data.quantity)} {data.unit}
                                             </Text>
                                         </Box>
                                     );
