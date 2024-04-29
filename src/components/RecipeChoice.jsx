@@ -1,14 +1,14 @@
 import { Box, Card, Stack, CardBody, Heading, Text, SimpleGrid, Highlight} from '@chakra-ui/react'
 import { Link } from 'react-router-dom';
 
-export const RecipeChoice = ({recipes}) => {
+export const RecipeChoice = ({recipes, clickfn}) => {
+    const handleCardClick = (id) => clickfn(id);
 
     return (
         <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10}>
                 {recipes.map((recipe, index) => (
-                    <Link to={`/recipe/${recipe.id}`} key={index}>
+                    <Link to={`/recipe/${recipe.id}`} key={index} onClick={() => handleCardClick(recipe.id)}>
                         <Card 
-                            onClick={() => handleCardClick(recipe)} 
                             bg="white.500"
                             color="white"
                             boxShadow="lg"
