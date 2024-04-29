@@ -47,13 +47,11 @@ export const RecipePage = () => {
                 <Box 
                     as="img"
                     src={recipe.imageUrl}
-                    style={{
-                        width: '100%',
-                        height: '600px',
-                        objectFit: 'cover',
-                        objectPosition: 'center',
-                        borderRadius: 'md',
-                    }}
+                    width= '100%'
+                    height= '600px'
+                    objectFit= 'cover'
+                    objectPosition= 'center'
+                    borderRadius= 'md'
                 />
                 <Grid templateColumns="repeat(2, 1fr)" gap={6}>
                     <Stack>
