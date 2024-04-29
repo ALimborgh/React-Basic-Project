@@ -10,12 +10,13 @@ export const RecipeChoice = ({recipes}) => {
             <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10}>
                 {recipes.map((recipe) => (
                     <Card 
-                        key={recipe.id} 
+                        key={recipe.label} 
                         onClick={() => handleCardClick(recipe)} 
                         bg="white.500"
                         color="white"
                         boxShadow="lg"
                         _hover={{ bg: "blue.100" }}
+                        border = "1px solid"
                     >
                         <CardBody>
                             <Box 
