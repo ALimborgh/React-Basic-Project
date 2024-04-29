@@ -42,7 +42,7 @@ export const RecipePage = () => {
             >
                 <Button 
                     color="Black" 
-                    _hover={{ bg: "teal.100" }} 
+                    _hover={{ bg: "blue.100" }} 
                     bg="teal.400" 
                     onClick={() =>navigate(-1)} 
                     mb={1} 

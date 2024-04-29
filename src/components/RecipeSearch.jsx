@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { TextInput } from './ui/TextInput';
 import { RecipeChoice } from './RecipeChoice';
 import { recipes } from '../utils/data';
+import { Box } from '@chakra-ui/react';
 
 export const RecipeSearch = ({ clickFn }) => {
     const [searchField, setSearchField] = useState('');
@@ -20,8 +21,19 @@ export const RecipeSearch = ({ clickFn }) => {
 
     return (
         <>
-            <label>Search for recipe:</label>
-            <TextInput changeFn={handleChange} w={200} mb={8} />
+            <TextInput 
+                changeFn={handleChange} 
+                w={200} 
+                mb={8} 
+                placeholder="Search here" 
+                border="2px solid" 
+                borderRadius="md" 
+                p={2}
+                color="black"
+                bg="white.500"
+                mt={4}
+                _hover={{ bg: "blue.100" }}
+            />
             <RecipeChoice clickFn={clickFn} recipes={matchedRecipes} />
         </>
     );
