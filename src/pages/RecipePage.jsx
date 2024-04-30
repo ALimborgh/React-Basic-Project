@@ -62,6 +62,7 @@ export const RecipePage = () => {
                         <Text as='b' fontSize='xl'>{recipe.title}</Text>
                         <Text as='i'>Time: {recipe.totalTime} min</Text> 
                         <Text as='i'>Servings: {recipe.servings}</Text>
+                        <Text as='i'>Dish Type: {recipe.dishType}</Text>
                         <Text as='b'>Ingredients: </Text>
                         {recipe.ingredients.map((ingredient, index) => (
                             <Text key={index}>- {ingredient}</Text>
