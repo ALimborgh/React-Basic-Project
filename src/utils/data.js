@@ -4241,16 +4241,16 @@ const data = JSON.parse(`{
         ],
         "cautions": [],
         "ingredientLines": [
-          "* 4 egg",
-          "* 2 cup milk",
-          "* 3/4 cup flour",
-          "* 1 tbl sugar",
-          "* pinch of salt",
-          "* 2 tbl melted butter"
+          "4 egg",
+          "2 cup milk",
+          "3/4 cup flour",
+          "1 tbl sugar",
+          "pinch of salt",
+          "2 tbl melted butter"
         ],
         "ingredients": [
           {
-            "text": "* 4 egg",
+            "text": "4 egg",
             "quantity": 4,
             "measure": "<unit>",
             "food": "egg",
@@ -4260,7 +4260,7 @@ const data = JSON.parse(`{
             "image": "https://www.edamam.com/food-img/a7e/a7ec7c337cb47c6550b3b118e357f077.jpg"
           },
           {
-            "text": "* 2 cup milk",
+            "text": "2 cup milk",
             "quantity": 2,
             "measure": "cup",
             "food": "milk",
@@ -4270,7 +4270,7 @@ const data = JSON.parse(`{
             "image": "https://www.edamam.com/food-img/7c9/7c9962acf83654a8d98ea6a2ade93735.jpg"
           },
           {
-            "text": "* 3/4 cup flour",
+            "text": "3/4 cup flour",
             "quantity": 0.75,
             "measure": "cup",
             "food": "flour",
@@ -4280,7 +4280,7 @@ const data = JSON.parse(`{
             "image": "https://www.edamam.com/food-img/b4c/b4c739e76a6f2172b7ad49d0aa41d5aa.jpg"
           },
           {
-            "text": "* 1 tbl sugar",
+            "text": "1 tbl sugar",
             "quantity": 1,
             "measure": "tablespoon",
             "food": "sugar",
@@ -4290,7 +4290,7 @@ const data = JSON.parse(`{
             "image": "https://www.edamam.com/food-img/ecb/ecb3f5aaed96d0188c21b8369be07765.jpg"
           },
           {
-            "text": "* pinch of salt",
+            "text": "pinch of salt",
             "quantity": 1,
             "measure": "pinch",
             "food": "salt",
@@ -4300,7 +4300,7 @@ const data = JSON.parse(`{
             "image": "https://www.edamam.com/food-img/694/6943ea510918c6025795e8dc6e6eaaeb.jpg"
           },
           {
-            "text": "* 2 tbl melted butter",
+            "text": "2 tbl melted butter",
             "quantity": 2,
             "measure": "tablespoon",
             "food": "butter",
